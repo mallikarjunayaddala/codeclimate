@@ -6,6 +6,18 @@ module CC
         @root = root
       end
 
+      def uid
+        stat.uid
+      end
+
+      def gid
+        stat.gid
+      end
+
+      def stat
+        @stat ||= File.stat(@root)
+      end
+
       def exist?(path)
         File.exist?(path_for(path))
       end

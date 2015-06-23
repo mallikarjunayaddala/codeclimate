@@ -31,6 +31,7 @@ module CC
         config["exclude_paths"] = exclude_paths(AUTO_EXCLUDE_PATHS)
 
         File.write(filesystem.path_for(CODECLIMATE_YAML), config.to_yaml)
+        set_local_owner
       end
 
       def exclude_paths(paths)

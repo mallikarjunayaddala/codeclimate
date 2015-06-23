@@ -43,6 +43,10 @@ module CC
         end
       end
 
+      def set_local_owner
+        File.chown(uid, gid, filesystem.path_for(CODECLIMATE_YAML))
+      end
+
       private
 
       def colorize(string, *args)
@@ -51,6 +55,14 @@ module CC
 
       def rainbow
         @rainbow ||= Rainbow.new
+      end
+
+      def uid
+        filesystem.uid
+      end
+
+      def gid
+        filesystem.gid
       end
 
       def filesystem

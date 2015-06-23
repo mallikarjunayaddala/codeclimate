@@ -24,6 +24,7 @@ module CC
           File.open(filesystem.path_for(CODECLIMATE_YAML), "w") do |f|
             f.write(parsed_yaml.to_yaml)
           end
+          set_local_owner
         end
 
         def engine_present_in_yaml?
