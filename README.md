@@ -1,4 +1,5 @@
 # Code Climate CLI
+[![Code Climate](https://codeclimate.com/repos/55761646e30ba0294000c39a/badges/a79258df5d14f82284ab/gpa.svg)](https://codeclimate.com/repos/55761646e30ba0294000c39a/feed)
 
 ## Overview
 
